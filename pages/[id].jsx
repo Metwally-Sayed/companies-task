@@ -53,7 +53,7 @@ const Company = () => {
                 {Array.isArray(getdata)
                   ? getdata?.map((data, idx) => {
                       return (
-                        <div>
+                        <div key={idx}>
                           <div>
                             <img
                               className="h-32 w-full object-cover lg:h-48"

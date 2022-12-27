@@ -72,63 +72,65 @@ const ContactUs = ({ getdata }) => {
                   ))}
                 </div>
                 <div className="mt-8  lg:mt-0">
-                  {getdata.map((item, idx) => (
-                    <div className="flex" key={idx}>
-                      <div>
-                        <h5 className="text-md mb-6 text-lg ">
-                          Company Social Links{' '}
-                        </h5>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          YouTube :
-                          <a href={item.social_links.YouTube}>
-                            {item.social_links.YouTube}
-                          </a>
+                  {Array.isArray(getdata)
+                    ? getdata.map((item, idx) => (
+                        <div className="flex" key={idx}>
+                          <div>
+                            <h5 className="text-md mb-6 text-lg ">
+                              Company Social Links{' '}
+                            </h5>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              YouTube :
+                              <a href={item.social_links.YouTube}>
+                                {item.social_links.YouTube}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              twitter :
+                              <a href={item.emails.contact}>
+                                {item.emails.contact}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              website :
+                              <a href={item.emails.recruitment}>
+                                {item.emails.recruitment}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              WhatsApp :
+                              <a href={item.social_links.WhatsApp}>
+                                {item.social_links.WhatsApp}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              facebook :
+                              <a href={item.social_links.facebook}>
+                                {item.social_links.facebook}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              linkedin :
+                              <a href={item.social_links.linkedin}>
+                                {item.social_links.linkedin}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              snapchat :
+                              <a href={item.social_links.snapchat}>
+                                {item.social_links.snapchat}
+                              </a>
+                            </div>
+                            <div className="text-lg font-medium text-warm-gray-900">
+                              instagram :
+                              <a href={item.social_links.instagram}>
+                                {item.social_links.instagram}
+                              </a>
+                            </div>
+                          </div>
                         </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          twitter :
-                          <a href={item.emails.contact}>
-                            {item.emails.contact}
-                          </a>
-                        </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          website :
-                          <a href={item.emails.recruitment}>
-                            {item.emails.recruitment}
-                          </a>
-                        </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          WhatsApp :
-                          <a href={item.social_links.WhatsApp}>
-                            {item.social_links.WhatsApp}
-                          </a>
-                        </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          facebook :
-                          <a href={item.social_links.facebook}>
-                            {item.social_links.facebook}
-                          </a>
-                        </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          linkedin :
-                          <a href={item.social_links.linkedin}>
-                            {item.social_links.linkedin}
-                          </a>
-                        </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          snapchat :
-                          <a href={item.social_links.snapchat}>
-                            {item.social_links.snapchat}
-                          </a>
-                        </div>
-                        <div className="text-lg font-medium text-warm-gray-900">
-                          instagram :
-                          <a href={item.social_links.instagram}>
-                            {item.social_links.instagram}
-                          </a>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                      ))
+                    : null}
                 </div>
               </section>
             </div>
