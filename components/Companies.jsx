@@ -8,7 +8,7 @@ const Companies = () => {
   const dispatch = useDispatch();
   const [data, setData] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const [postPerPage, setPostPerPage] = useState(5);
+  const [postPerPage, setPostPerPage] = useState(8);
 
   useEffect(() => {
     async function fetchData() {
