@@ -42,6 +42,7 @@ const Company = () => {
   const getdata = useSelector((state) => state.companyData);
 
   console.log(getdata);
+  console.log(typeof getdata);
   return (
     <div>
       <div className="flex h-full">
@@ -49,9 +50,8 @@ const Company = () => {
           <div className="relative z-0 flex flex-1 overflow-hidden">
             <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none xl:order-last">
               <article>
-                {/* Profile header */}
                 {Array.isArray(getdata)
-                  ? getdata?.map((data, idx) => {
+                  ? getdata.map((data, idx) => {
                       return (
                         <div key={idx}>
                           <div>
@@ -106,14 +106,12 @@ const Company = () => {
                   : ''}
                 <ContactUs getdata={getdata} />
 
-                {/* Tabs */}
                 <div className="mt-6 sm:mt-2 2xl:mt-5">
                   <div className="border-b border-gray-200">
                     <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8"></div>
                   </div>
                 </div>
-                {/* Description list */}
-                {/* Team member list */}
+
                 <div className="mx-auto mt-8 max-w-5xl px-4 pb-12 sm:px-6 lg:px-8">
                   <h2 className="text-sm font-medium text-gray-500">
                     Team members
